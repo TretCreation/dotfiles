@@ -36,6 +36,20 @@ keymap.set("n", "<M-l>", '<Cmd>lua require("tmux").resize_right()<CR>', { silent
 
 local set_keymap = vim.api.nvim_set_keymap
 
+-- Default `d$`: Delete to end of line without saving
+vim.keymap.set("n", "d$", '"_d$', { noremap = true, silent = true })
+
+-- <leader>d$: Delete to end of line and save to buffer
+vim.keymap.set("n", "<leader>d$", "d$", { noremap = true, silent = true })
+
+-- Default `d`: Delete without saving to the buffer (black hole register)
+vim.keymap.set("n", "d", '"_d', { noremap = true, silent = true })
+vim.keymap.set("v", "d", '"_d', { noremap = true, silent = true })
+
+-- <leader>d: Delete and save to the buffer (default behavior)
+vim.keymap.set("n", "<leader>d", "d", { noremap = true, silent = true })
+vim.keymap.set("v", "<leader>d", "d", { noremap = true, silent = true })
+
 -- Escape
 vim.keymap.set("i", "jk", "<Esc>")
 
@@ -82,3 +96,4 @@ set_keymap(
   "<cmd>lua require('package-info').change_version()<cr>",
   { silent = true, noremap = true, desc = "Change package version" }
 )
+
