@@ -42,6 +42,12 @@ return {
                 variableTypes = { enabled = false },
               },
             },
+            -- ltex = {
+            -- language = "en", -- Change to your preferred language (e.g., "en-GB", "fr", etc.)
+            -- enabled = { "markdown", "text", "tex", "latex" }, -- Enable for specific file types
+            -- diagnosticSeverity = "warning", -- Adjust severity (e.g., "warning", "hint")
+            -- completionEnabled = true, -- Enable completion suggestions
+            -- },
           },
         },
       },

@@ -1,0 +1,15 @@
+{
+  "Next.js Function Component": {
+    "prefix": "nfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return <div>${2:Content}</div>;",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Next.js function component"
+  }
+}

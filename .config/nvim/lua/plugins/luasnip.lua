@@ -5,4 +5,8 @@ return {
     region_check_events = "InsertEnter",
     delete_check_events = "TextChanged,InsertLeave",
   },
+  config = function()
+    -- Lazy load custom snippets from your folder
+    require("luasnip.loaders.from_vscode").lazy_load({ paths = { "" } })
+  end,
 }

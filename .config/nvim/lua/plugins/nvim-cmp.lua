@@ -8,37 +8,38 @@ return {
     "hrsh7th/nvim-cmp",
     opts = function(_, opts)
       opts.completion.autocomplete = false
-      opts.mapping["<CR>"] = nil
+      opts.mapping["<cr>"] = nil
       opts.window = {
         completion = {
           border = {
-            { "󱐋", "WarningMsg" },
-            { "─", "Comment" },
-            { "╮", "Comment" },
-            { "│", "Comment" },
-            { "╯", "Comment" },
-            { "─", "Comment" },
-            { "╰", "Comment" },
-            { "│", "Comment" },
+            { "󱐋", "warningmsg" },
+            { "─", "comment" },
+            { "╮", "comment" },
+            { "│", "comment" },
+            { "╯", "comment" },
+            { "─", "comment" },
+            { "╰", "comment" },
+            { "│", "comment" },
           },
           scrollbar = false,
           winblend = 0,
         },
         documentation = {
           border = {
-            { "󰙎", "DiagnosticHint" },
-            { "─", "Comment" },
-            { "╮", "Comment" },
-            { "│", "Comment" },
-            { "╯", "Comment" },
-            { "─", "Comment" },
-            { "╰", "Comment" },
-            { "│", "Comment" },
+            { "󰙎", "diagnostichint" },
+            { "─", "comment" },
+            { "╮", "comment" },
+            { "│", "comment" },
+            { "╯", "comment" },
+            { "─", "comment" },
+            { "╰", "comment" },
+            { "│", "comment" },
           },
           scrollbar = false,
           winblend = 0,
         },
       }
+      table.insert(opts.sources, { name = "luasnip" })
     end,
   },
 }

@@ -30,7 +30,7 @@ return {
     },
     config = function(_, opts)
       require("auto-save").setup(opts)
-  
+
       -- Add the custom autocommand here
       local group = vim.api.nvim_create_augroup("autosave", {})
       vim.api.nvim_create_autocmd("User", {
@@ -43,17 +43,17 @@ return {
             local notify_id = vim.notify(msg, vim.log.levels.INFO, { timeout = 500 }) -- 500ms timeout
           end
         end,
-			-- 	config = function(_, opts)
-			--   require("auto-save").setup(opts)
+        -- 	config = function(_, opts)
+        --   require("auto-save").setup(opts)
 
-			--   -- Create the autocommand group
-			--   local group = vim.api.nvim_create_augroup("autosave", {})
-			--   vim.api.nvim_create_autocmd("User", {
-			--     pattern = "AutoSaveWritePost",
-			--     group = group,
-			--     callback = nil, -- Remove notification logic
-			--   })
-			-- end,
+        --   -- Create the autocommand group
+        --   local group = vim.api.nvim_create_augroup("autosave", {})
+        --   vim.api.nvim_create_autocmd("User", {
+        --     pattern = "AutoSaveWritePost",
+        --     group = group,
+        --     callback = nil, -- Remove notification logic
+        --   })
+        -- end,
       })
     end,
   },

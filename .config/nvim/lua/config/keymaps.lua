@@ -36,6 +36,8 @@ keymap.set("n", "<M-l>", '<Cmd>lua require("tmux").resize_right()<CR>', { silent
 
 local set_keymap = vim.api.nvim_set_keymap
 
+vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, { desc = "Apply LSP suggestion" })
+
 -- Default `d$`: Delete to end of line without saving
 vim.keymap.set("n", "d$", '"_d$', { noremap = true, silent = true })
 
@@ -51,7 +53,7 @@ vim.keymap.set("n", "<leader>d", "d", { noremap = true, silent = true })
 vim.keymap.set("v", "<leader>d", "d", { noremap = true, silent = true })
 
 -- Escape
-vim.keymap.set("i", "jk", "<Esc>")
+-- vim.keymap.set("i", "jk", "<Esc>")
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
@@ -96,4 +98,3 @@ set_keymap(
   "<cmd>lua require('package-info').change_version()<cr>",
   { silent = true, noremap = true, desc = "Change package version" }
 )
-
