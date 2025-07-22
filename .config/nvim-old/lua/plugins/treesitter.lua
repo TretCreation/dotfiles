@@ -3,6 +3,13 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "astro",
+        "bash",
+        "c",
+        "cmake",
+        "cpp",
+        "css",
+        "diff",
         "dockerfile",
         "gitignore",
         "html",
@@ -18,6 +25,7 @@ return {
         "markdown",
         "markdown_inline",
         "prisma",
+        "python",
         "query",
         "regex",
         "sql",
